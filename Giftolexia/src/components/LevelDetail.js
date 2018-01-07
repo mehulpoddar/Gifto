@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
-import Card from './common/Card';
-import CardSection from './common/CardSection';
+import { Card, CardSection } from './common';
 
 const LevelDetail = (props) => {
   const {
@@ -11,6 +10,7 @@ const LevelDetail = (props) => {
   } = styles;
 
   return (
+    //onPress={() => props.navi}
       <Card>
         <TouchableOpacity>
           <CardSection>

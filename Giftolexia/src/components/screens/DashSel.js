@@ -11,7 +11,7 @@ const DashSel = ({ navigation }) => {
 
       <TouchableOpacity
       style={styles.childStyle}
-      onPress={() => navigation.navigate('login')}
+      onPress={() => navigation.navigate('childDash')}
       >
         <Image source={childImg} />
       </TouchableOpacity>

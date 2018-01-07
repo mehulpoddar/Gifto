@@ -7,7 +7,12 @@ const image1 = require('../../images/Level1.png');
 const image2 = require('../../images/child_dash.png');
 
 const levels = [
-  { level: 'Level 1', name: 'Phonetic Chart', image: image1 },
+  {
+    level: 'Level 1',
+    name: 'Phonetic Chart',
+    image: image1,
+    //navi: this.props.navigation.navigate('level1')
+  },
   { level: 'Level 2', name: 'ABC', image: image2 },
   { level: 'Level 3', name: 'XYZ', image: image2 },
   { level: 'Level 4', name: 'PQR', image: image2 },
@@ -16,7 +21,7 @@ const levels = [
   { level: 'Level 7', name: 'MNO', image: image2 },
 ];
 
-class AlbumList extends Component {
+class ChildDash extends Component {
   constructor(props) {
     super(props);
      const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
@@ -58,4 +63,4 @@ const styles = {
   }
 };
 
-export default AlbumList;
+export default ChildDash;
