@@ -122,7 +122,11 @@ const styles = {
   imageStyle: {
     height: 85,
     width: 1688,
-    flex: 1
+    flex: 1,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 2,
+    paddingRight: 2
   }
 };
 
