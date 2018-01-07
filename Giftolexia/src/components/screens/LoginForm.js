@@ -20,18 +20,23 @@ const iconImg = require('../../images/gifto_icon.png');
      });
    }
 
-   onButtonPress() {
+   onButton1Press() {
      const { email, password } = this.state;
 
      this.setState({ error: '', loading: true });
 
      firebase.auth().signInWithEmailAndPassword(email, password)
      .then(this.onLoginSuccess.bind(this))
-      .catch(() => {
+      .catch(this.onLoginFail.bind(this));
+   }
+
+   onButton2Press() {
+     const { email, password } = this.state;
+
+     this.setState({ error: '', loading: true });
         firebase.auth().createUserWithEmailAndPassword(email, password)
          .then(this.onLoginSuccess.bind(this))
          .catch(this.onLoginFail.bind(this));
-      });
    }
 
    onLoginFail() {
@@ -46,6 +51,12 @@ const iconImg = require('../../images/gifto_icon.png');
        error: ''
      });
      this.props.navigation.navigate('dashSel');
+   }
+
+   loadingSpinner() {
+     if (this.state.loading) {
+       return <Spinner size="small" />;
+     }
    }
 
    renderButton1() {
@@ -97,10 +108,11 @@ const iconImg = require('../../images/gifto_icon.png');
           {this.renderButton1()}
          </CardSection>
          <CardSection>
-          <Button>
-           Sign Up
-           </Button>
+          {this.renderButton2()}
         </CardSection>
+        <CardSection>
+         {this.loadingSpinner()}
+       </CardSection>
          </Card>
        );
      }
