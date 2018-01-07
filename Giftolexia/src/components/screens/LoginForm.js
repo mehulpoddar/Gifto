@@ -66,7 +66,7 @@ const iconImg = require('../../images/gifto_icon.png');
        </Button>
      );
    }
-   
+
    renderButton2() {
      return (
        <Button onPress={this.onButton2Press.bind(this)}>
@@ -83,6 +83,7 @@ const iconImg = require('../../images/gifto_icon.png');
           <Image
            style={styles.imageStyle}
            source={logoImg}
+           resizeMode="stretch"
           />
         </CardSection>
          <CardSection>
@@ -136,8 +137,8 @@ const styles = {
     color: 'red'
   },
   imageStyle: {
-    height: 100,
-    width: undefined,
+    height: 80,
+    width: null,
     flex: 1,
     alignSelf: 'stretch'
   }
