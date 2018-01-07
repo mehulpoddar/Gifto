@@ -83,6 +83,7 @@ const iconImg = require('../../images/gifto_icon.png');
           <Image
            style={styles.imageStyle}
            source={logoImg}
+           resizeMode="contain"
           />
         </CardSection>
          <CardSection>
@@ -136,8 +137,8 @@ const styles = {
     color: 'red'
   },
   imageStyle: {
-    height: 85,
-    width: null,
+    height: undefined,
+    width: undefined,
     flex: 1
     //alignSelf: 'stretch'
   }
