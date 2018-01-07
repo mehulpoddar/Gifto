@@ -11,7 +11,7 @@ const LevelDetail = (props) => {
 
   return (
       <Card>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props.onPress}>
           <CardSection>
             <View style={labelStyle}>
               <Text style={labelTextStyle}>{props.level}</Text>

@@ -41,7 +41,12 @@ class ChildDash extends Component {
         <ListView
           style={{ flex: 1 }}
           dataSource={this.state.dataSource}
-          renderRow={(data) => <LevelDetail {...data} />}
+          renderRow={
+            (data) => <LevelDetail
+            {...data}
+            onPress={() => this.props.navigation.navigate(data.navi)}
+            />
+          }
         />
       </View>
     );
