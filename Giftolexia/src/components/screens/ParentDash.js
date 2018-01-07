@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
+import { Header } from '../common';
 
 const headerImage = require('../../images/gifto_logo.png');
 
@@ -12,6 +13,7 @@ class ParentDash extends Component {
           style={styles.imageStyle}
           resizeMode="stretch"
         />
+        <Header>Parent Dashboard</Header>
       </View>
     );
   }

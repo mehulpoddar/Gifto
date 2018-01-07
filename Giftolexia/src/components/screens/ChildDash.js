@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ListView, View, Image } from 'react-native';
+import { Header } from '../common';
 import LevelDetail from '../LevelDetail';
 
 const headerImage = require('../../images/gifto_logo.png');
@@ -38,6 +39,7 @@ class ChildDash extends Component {
             style={styles.imageStyle}
             resizeMode="stretch"
           />
+          <Header>Child Dashboard</Header>
         </View>
         <ListView
           style={{ flex: 1 }}
