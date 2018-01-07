@@ -8,12 +8,12 @@ class App extends Component {
   state = { loggedIn: true }
   componentWillMount() {
     firebase.initializeApp({
-      apiKey: "AIzaSyAzhSnvo7f3CLsZQAPR4hIUeUxZ8TdGnf4",
-      authDomain: "giftolexia-3c09f.firebaseapp.com",
-      databaseURL: "https://giftolexia-3c09f.firebaseio.com",
-      projectId: "giftolexia-3c09f",
-      storageBucket: "giftolexia-3c09f.appspot.com",
-      messagingSenderId: "967747504832"
+      apiKey: 'AIzaSyAzhSnvo7f3CLsZQAPR4hIUeUxZ8TdGnf4',
+      authDomain: 'giftolexia-3c09f.firebaseapp.com',
+      databaseURL: 'https://giftolexia-3c09f.firebaseio.com',
+      projectId: 'giftolexia-3c09f',
+      storageBucket: 'giftolexia-3c09f.appspot.com',
+      messagingSenderId: '967747504832'
   });
 
   firebase.auth().onAuthStateChanged((user) => {
