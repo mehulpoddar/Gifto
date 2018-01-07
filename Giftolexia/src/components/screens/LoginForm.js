@@ -60,13 +60,17 @@ const iconImg = require('../../images/gifto_icon.png');
    }
 
    renderButton1() {
-     if (this.state.loading) {
-       return <Spinner size="small" />;
-     }
-
      return (
-       <Button onPress={this.onButtonPress.bind(this)}>
+       <Button onPress={this.onButton1Press.bind(this)}>
         Log in
+       </Button>
+     );
+   }
+   
+   renderButton2() {
+     return (
+       <Button onPress={this.onButton2Press.bind(this)}>
+        Sign Up
        </Button>
      );
    }
