@@ -120,13 +120,10 @@ const styles = {
     color: 'red'
   },
   imageStyle: {
-    height: 85,
-    width: null,
+    height: 100,
+    width: undefined,
     flex: 1,
-    /*paddingTop: 2,
-    paddingBottom: 2,
-    paddingLeft: 2,
-    paddingRight: 2*/
+    alignSelf: 'stretch'
   }
 };
 
