@@ -11,7 +11,7 @@ const levels = [
     level: 'Level 1',
     name: 'Phonetic Chart',
     image: image1,
-    //navi: this.props.navigation.navigate('level1')
+    navi: 'level1'
   },
   { level: 'Level 2', name: 'ABC', image: image2 },
   { level: 'Level 3', name: 'XYZ', image: image2 },

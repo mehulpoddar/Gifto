@@ -27,16 +27,17 @@ const DashSel = ({ navigation }) => {
 const styles = {
   bgStyle: {
     flex: 1,
+    justifyContent: 'space-between'
   },
   childStyle: {
     alignSelf: 'center',
     position: 'absolute',
-    marginTop: -30
+    top: -25
   },
   parentStyle: {
     alignSelf: 'center',
-    marginTop: 290,
-    position: 'absolute'
+    position: 'absolute',
+    bottom: -15
   },
 };
 

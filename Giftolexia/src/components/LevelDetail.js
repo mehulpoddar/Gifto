@@ -10,7 +10,6 @@ const LevelDetail = (props) => {
   } = styles;
 
   return (
-    //onPress={() => props.navi}
       <Card>
         <TouchableOpacity>
           <CardSection>
