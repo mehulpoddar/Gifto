@@ -5,13 +5,13 @@ const bgImg = require('../../images/black.jpg');
 const childImg = require('../../images/child_dash.png');
 const parentImg = require('../../images/parent_dash.png');
 
-const DashSel = () => {
+const DashSel = ({ navigation }) => {
   return (
     <ImageBackground source={bgImg} style={styles.bgStyle} >
 
       <TouchableOpacity
       style={styles.childStyle}
-      onPress={() => this.props.navigation.navigate('login')}
+      onPress={() => navigation.navigate('login')}
       >
         <Image source={childImg} />
       </TouchableOpacity>

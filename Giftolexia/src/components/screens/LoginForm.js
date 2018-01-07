@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import { Text, Image } from 'react-native';
+import { Text, Image, View } from 'react-native';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from '../common';
 
 const logoImg = require('../../images/gifto_logo.png');
+const iconImg = require('../../images/gifto_icon.png');
 
  class LoginForm extends Component {
-   state = { email: '', password: '', error: '', loading: false };
+   state = { email: '', password: '', error: '', loading: false, loggedIn: true };
+   //Assuming that user is logged In
 
    componentWillMount() {
      firebase.auth().onAuthStateChanged((user) => {
        if (user) {
          this.props.navigation.navigate('dashSel');
+       } else {
+         this.setState({ loggedIn: false });
        }
      });
    }
@@ -57,46 +61,54 @@ const logoImg = require('../../images/gifto_logo.png');
    }
 
    render() {
+     if (!this.state.loggedIn) {
+       return (
+         <Card>
+         <CardSection>
+          <Image
+           style={styles.imageStyle}
+           source={logoImg}
+          />
+        </CardSection>
+         <CardSection>
+          <Input
+          placeholder="user@gmail.com"
+          label="Email"
+          value={this.state.email}
+          onChangeText={email => this.setState({ email })}
+          />
+         </CardSection>
+
+         <CardSection>
+          <Input
+           secureTextEntry
+           placeholder="password"
+           label="Password"
+           value={this.state.password}
+           onChangeText={password => this.setState({ password })}
+          />
+         </CardSection>
+
+          <Text style={styles.errorTextStyle}>
+           {this.state.error}
+          </Text>
+
+         <CardSection>
+          {this.renderButton1()}
+         </CardSection>
+         <CardSection>
+          <Button>
+           Sign Up
+           </Button>
+        </CardSection>
+         </Card>
+       );
+     }
      return (
-       <Card>
-       <CardSection>
-        <Image
-         style={styles.imageStyle}
-         source={logoImg}
-        />
-      </CardSection>
-       <CardSection>
-        <Input
-        placeholder="user@gmail.com"
-        label="Email"
-        value={this.state.email}
-        onChangeText={email => this.setState({ email })}
-        />
-       </CardSection>
-
-       <CardSection>
-        <Input
-         secureTextEntry
-         placeholder="password"
-         label="Password"
-         value={this.state.password}
-         onChangeText={password => this.setState({ password })}
-        />
-       </CardSection>
-
-        <Text style={styles.errorTextStyle}>
-         {this.state.error}
-        </Text>
-
-       <CardSection>
-        {this.renderButton1()}
-       </CardSection>
-       <CardSection>
-        <Button>
-         Sign Up
-         </Button>
-      </CardSection>
-       </Card>
+       <View style={{ height: 450 }}>
+        <Spinner size='large' />
+        <Image source={iconImg} style={{ alignSelf: 'center' }} />
+       </View>
      );
    }
  }
