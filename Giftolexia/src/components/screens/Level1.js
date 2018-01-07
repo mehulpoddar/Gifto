@@ -4,7 +4,9 @@ import { Header } from '../common';
 
 const Level1 = () => (
   <View style={{ flex: 1 }}>
-    <Header headerText={'Level 1'} />
+    <Header>
+      Level 1
+    </Header>
   </View>
 );
 

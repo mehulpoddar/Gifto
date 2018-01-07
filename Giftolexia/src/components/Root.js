@@ -11,7 +11,10 @@ const LevelNav = StackNavigator({
   },
   level1: {
     screen: Level1
-  },
+  }
+},
+{
+  headerMode: 'none'
 });
 
 const Root = StackNavigator({
