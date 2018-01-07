@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
 import firebase from 'firebase';
 import Root from './src/components/Root';
 import { Spinner } from './src/components/common';
@@ -7,7 +6,7 @@ import LoginForm from './src/components/screens/LoginForm';
 import DashSel from './src/components/screens/DashSel';
 
 class App extends Component {
-  state = { loggedIn: true }
+  state = { loggedIn: null }
   componentWillMount() {
     firebase.initializeApp({
       apiKey: 'AIzaSyAzhSnvo7f3CLsZQAPR4hIUeUxZ8TdGnf4',

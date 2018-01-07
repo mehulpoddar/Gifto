@@ -3,8 +3,18 @@ import { Text, Image } from 'react-native';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from '../common';
 
+const logoImg = require('../../images/gifto_logo.png');
+
  class LoginForm extends Component {
    state = { email: '', password: '', error: '', loading: false };
+
+   componentWillMount() {
+     firebase.auth().onAuthStateChanged((user) => {
+       if (user) {
+         this.props.navigation.navigate('dashSel');
+       }
+     });
+   }
 
    onButtonPress() {
      const { email, password } = this.state;
@@ -31,6 +41,7 @@ import { Button, Card, CardSection, Input, Spinner } from '../common';
        loading: false,
        error: ''
      });
+     this.props.navigation.navigate('dashSel');
    }
 
    renderButton1() {
@@ -51,7 +62,7 @@ import { Button, Card, CardSection, Input, Spinner } from '../common';
        <CardSection>
         <Image
          style={styles.imageStyle}
-         source={require('../../images/gifto_logo.png')}
+         source={logoImg}
         />
       </CardSection>
        <CardSection>

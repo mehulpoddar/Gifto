@@ -8,12 +8,18 @@ const parentImg = require('../../images/parent_dash.png');
 const DashSel = () => {
   return (
     <ImageBackground source={bgImg} style={styles.bgStyle} >
-      <TouchableOpacity style={styles.childStyle} >
+
+      <TouchableOpacity
+      style={styles.childStyle}
+      onPress={() => this.props.navigation.navigate('login')}
+      >
         <Image source={childImg} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.parentStyle} >
+
+      <TouchableOpacity style={styles.parentStyle}>
         <Image source={parentImg} />
       </TouchableOpacity>
+
     </ImageBackground>
   );
 };
