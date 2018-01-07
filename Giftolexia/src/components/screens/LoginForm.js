@@ -66,7 +66,7 @@ const iconImg = require('../../images/gifto_icon.png');
        </Button>
      );
    }
-   
+
    renderButton2() {
      return (
        <Button onPress={this.onButton2Press.bind(this)}>
@@ -136,10 +136,10 @@ const styles = {
     color: 'red'
   },
   imageStyle: {
-    height: 100,
-    width: undefined,
-    flex: 1,
-    alignSelf: 'stretch'
+    height: 85,
+    width: null,
+    flex: 1
+    //alignSelf: 'stretch'
   }
 };
 
