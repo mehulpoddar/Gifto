@@ -36,6 +36,7 @@ class ChildDash extends Component {
           <Image
             source={headerImage}
             style={styles.imageStyle}
+            resizeMode="stretch"
           />
         </View>
         <ListView
