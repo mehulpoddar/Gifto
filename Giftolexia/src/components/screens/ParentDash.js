@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
-import { Header } from '../common';
+import firebase from 'firebase';
+import { Header, Button } from '../common';
 
 const headerImage = require('../../images/gifto_logo.png');
 
@@ -14,6 +15,9 @@ class ParentDash extends Component {
           resizeMode="stretch"
         />
         <Header>Parent Dashboard</Header>
+        <View style={{ flexDirection: 'row' }}>
+        <Button onPress={() => firebase.auth().signOut()}>Log out</Button>
+        </View>
       </View>
     );
   }
