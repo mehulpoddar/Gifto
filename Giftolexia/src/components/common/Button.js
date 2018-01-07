@@ -18,8 +18,8 @@ const styles = {
     color: '#007aff',
     paddingTop: 10,
     paddingBottom: 10,
-    textShadowColor: '#ddd',
-    textShadowOffset: { height: 3, width: 2 }
+    //textShadowColor: '#ddd',
+    //textShadowOffset: { height: 3, width: 2 }
   },
   buttonStyle: {
     backgroundColor: '#fff',
