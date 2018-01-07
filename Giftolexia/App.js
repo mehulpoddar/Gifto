@@ -3,7 +3,6 @@ import firebase from 'firebase';
 import Root from './src/components/Root';
 
 class App extends Component {
-  state = { loggedIn: null }
   componentWillMount() {
     firebase.initializeApp({
       apiKey: 'AIzaSyAzhSnvo7f3CLsZQAPR4hIUeUxZ8TdGnf4',
