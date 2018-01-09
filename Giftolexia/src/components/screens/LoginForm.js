@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Image, View, KeyboardAvoidingView,
-   StatusBar, TextInput, TouchableOpacity, Alert } from 'react-native';
+   StatusBar, TextInput, TouchableOpacity, Alert, Linking } from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
 
@@ -124,6 +124,10 @@ export default class Login extends Component {
     <TouchableOpacity onPress={this.forgotPassword.bind(this)}>
      <Text>Forgot password?</Text>
    </TouchableOpacity>
+
+   <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/giftolexia/')}>
+    <Text>About Us</Text>
+  </TouchableOpacity>
 
     {this.loadingSpinner()}
 
