@@ -4,7 +4,7 @@ import { Header } from '../common';
 import LevelDetail from '../LevelDetail';
 
 const headerImage = require('../../images/gifto_logo.png');
-const image1 = require('../../images/Level1.png');
+const image1 = require('../../images/level1.jpg');
 const image2 = require('../../images/child_dash.png');
 
 const levels = [

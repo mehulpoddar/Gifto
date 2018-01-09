@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Text, Image, View, KeyboardAvoidingView,
-   StatusBar, TextInput, TouchableOpacity, Alert, Linking } from 'react-native';
+import { Text, Image, View,
+         KeyboardAvoidingView, StatusBar,
+         TextInput, ImageBackground,
+         TouchableOpacity, Alert, Linking }
+from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
 
 const iconImg = require('../../images/gifto_icon.png');
+const gradientBg = require('../../images/blueWhite.jpg');
 
 export default class Login extends Component {
   state = { email: '', password: '', error: '', loading: false, loggedIn: true };
@@ -12,14 +16,14 @@ export default class Login extends Component {
   componentWillMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-          this.props.navigation.navigate('dashSel');
+          this.onLoginSuccess();
       } else {
         this.setState({ loggedIn: false });
       }
     });
   }
 
-  onButton1Press() {
+  onLogInPress() {
     const { email, password } = this.state;
 
     this.setState({ error: '', loading: true });
@@ -29,7 +33,7 @@ export default class Login extends Component {
      .catch(this.onLoginFail.bind(this));
   }
 
-  onButton2Press() {
+  onSignUpPress() {
     const { email, password } = this.state;
 
     this.setState({ error: '', loading: true });
@@ -67,6 +71,7 @@ export default class Login extends Component {
     if (!this.state.loggedIn) {
    return (
     <KeyboardAvoidingView style={styles.mainContainer}>
+    <ImageBackground source={gradientBg} style={styles.mainContainer}>
      <View style={styles.logoContainer}>
       <Image
        style={styles.logo}
@@ -98,7 +103,7 @@ export default class Login extends Component {
       style={styles.input}
       secureTextEntry
       returnKeyType="go"
-      ref={(input) => this.passwordInput = input}
+      ref={(input) => this.passwordInput = input }
       value={this.state.password}
       onChangeText={password => this.setState({ password })}
       />
@@ -108,15 +113,15 @@ export default class Login extends Component {
       </Text>
 
       <TouchableOpacity
-       style={styles.buttonContainer1}
-       onPress={this.onButton1Press.bind(this)}
+       style={styles.logInContainer}
+       onPress={this.onLogInPress.bind(this)}
       >
        <Text style={styles.buttonText}>LOG IN</Text>
      </TouchableOpacity>
 
      <TouchableOpacity
-      style={styles.buttonContainer2}
-      onPress={this.onButton2Press.bind(this)}
+      style={styles.signUpContainer}
+      onPress={this.onSignUpPress.bind(this)}
      >
       <Text style={styles.buttonText}>SIGN UP</Text>
     </TouchableOpacity>
@@ -133,6 +138,7 @@ export default class Login extends Component {
 
      </View>
      </View>
+     </ImageBackground>
     </KeyboardAvoidingView>
   );
  }
@@ -148,7 +154,7 @@ export default class Login extends Component {
 const styles = {
   mainContainer: {
     flex: 1,
-    backgroundColor: '#3498db'
+    //backgroundColor: '#3498db'
   },
   logoContainer: {
     alignItems: 'center',
@@ -176,13 +182,13 @@ const styles = {
     paddingHorizontal: 10,
     fontSize: 18
   },
-  buttonContainer1: {
+  logInContainer: {
     backgroundColor: '#2980b9',
     paddingVertical: 15,
     marginBottom: 15,
     marginTop: 15
   },
-  buttonContainer2: {
+  signUpContainer: {
     backgroundColor: '#2980b9',
     paddingVertical: 15,
     marginBottom: 15,
