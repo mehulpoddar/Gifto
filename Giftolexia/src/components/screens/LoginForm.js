@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Image, View, KeyboardAvoidingView,
-   StatusBar, TextInput, TouchableOpacity } from 'react-native';
+   StatusBar, TextInput, TouchableOpacity, Alert } from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
 
@@ -57,6 +57,12 @@ export default class Login extends Component {
       return <Spinner size="small" />;
     }
   }
+
+  forgotPassword() {
+    firebase.auth().sendPasswordResetEmail(this.state.email);
+    Alert.alert('Reset Email has been sent to your Email ID');
+  }
+
   render() {
     if (!this.state.loggedIn) {
    return (
@@ -115,7 +121,7 @@ export default class Login extends Component {
       <Text style={styles.buttonText}>SIGN UP</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity>
+    <TouchableOpacity onPress={this.forgotPassword.bind(this)}>
      <Text>Forgot password?</Text>
    </TouchableOpacity>
 
