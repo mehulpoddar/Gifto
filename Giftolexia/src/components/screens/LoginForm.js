@@ -63,8 +63,13 @@ export default class Login extends Component {
   }
 
   forgotPassword() {
-    firebase.auth().sendPasswordResetEmail(this.state.email);
-    Alert.alert('Reset Email has been sent to your Email ID');
+    firebase.auth().sendPasswordResetEmail(this.state.email)
+    .then(Alert.alert('Reset Email has been sent to your Email ID!'))
+     .catch(this.forgotPasswordFail.bind(this));
+  }
+
+  forgotPasswordFail() {
+    Alert.alert('Please enter a valid Email ID!');
   }
 
   render() {
