@@ -1,7 +1,7 @@
 //import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import DashSel from './screens/DashSel';
-import LoginForm from './screens/LoginForm';
+import Login from './screens/Login';
 import ChildDash from './screens/ChildDash';
 import ParentDash from './screens/ParentDash';
 import Level1 from './screens/Level1';
@@ -21,7 +21,7 @@ const LevelNav = StackNavigator({
 
 const Root = StackNavigator({
     login: {
-      screen: LoginForm
+      screen: Login
     },
     dashSel: {
       screen: DashSel
