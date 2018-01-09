@@ -106,6 +106,10 @@ export default class LoginForm1 extends Component {
      <Text style={styles.buttonText}>SIGN UP</Text>
    </TouchableOpacity>
 
+   <TouchableOpacity>
+    <Text>Forgot password?</Text>
+  </TouchableOpacity>
+
    {this.loadingSpinner()}
 
     </View>
