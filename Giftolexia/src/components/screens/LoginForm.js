@@ -59,14 +59,14 @@ export default class Login extends Component {
   }
 
   forgotPassword() {
-    if ((this.state.email) === '') {
-      Alert.alert('Empty Username! Please check again!');
-    }
-    else {
-    firebase.auth().sendPasswordResetEmail(this.state.email);
-    Alert.alert('Reset Email has been sent to your Email ID');
+    firebase.auth().sendPasswordResetEmail(this.state.email)
+    .then(Alert.alert('Reset Email has been sent to your Email ID!'))
+     .catch(this.forgotPasswordFail.bind(this));
   }
-}
+
+  forgotPasswordFail() {
+    Alert.alert('Please enter a valid Email ID!');
+  }
 
   render() {
     if (!this.state.loggedIn) {
