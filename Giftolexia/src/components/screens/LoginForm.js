@@ -92,7 +92,7 @@ export default class Login extends Component {
       style={styles.input}
       secureTextEntry
       returnKeyType="go"
-      //ref={(input) => this.passwordInput = input}
+      ref={(input) => this.passwordInput = input}
       value={this.state.password}
       onChangeText={password => this.setState({ password })}
       />
