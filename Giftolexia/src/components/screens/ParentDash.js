@@ -6,6 +6,12 @@ import { Header, Button } from '../common';
 const headerImage = require('../../images/gifto_logo.png');
 
 class ParentDash extends Component {
+
+  logout() {
+    firebase.auth().signOut();
+    this.props.navigation.navigate('login');
+  }
+
   render() {
     return (
       <View style={styles.containerStyle}>
@@ -16,7 +22,7 @@ class ParentDash extends Component {
         />
         <Header>Parent Dashboard</Header>
         <View style={{ flexDirection: 'row' }}>
-        <Button onPress={() => firebase.auth().signOut()}>Log out</Button>
+          <Button onPress={this.logout()}>Log out</Button>
         </View>
       </View>
     );

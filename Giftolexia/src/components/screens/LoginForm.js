@@ -185,19 +185,22 @@ const styles = {
     marginBottom: 10,
     color: '#fff',
     paddingHorizontal: 10,
-    fontSize: 18
+    fontSize: 18,
+    borderRadius: 10
   },
   logInContainer: {
-    backgroundColor: '#2980b9',
+    backgroundColor: '#499acf',
     paddingVertical: 15,
     marginBottom: 15,
-    marginTop: 15
+    marginTop: 15,
+    borderRadius: 10
   },
   signUpContainer: {
-    backgroundColor: '#2980b9',
+    backgroundColor: '#499acf',
     paddingVertical: 15,
     marginBottom: 15,
-    marginTop: 0
+    marginTop: 0,
+    borderRadius: 10
   },
   buttonText: {
     textAlign: 'center',
