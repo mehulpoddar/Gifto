@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text } from 'react-native';
 import { Header } from '../../common';
-
-const overlay = require('../../../images/purple.png');
+import PayOverlay from '../../PayOverlay';
 
 class Level1Test extends Component {
 
@@ -16,16 +15,9 @@ class Level1Test extends Component {
           <Text style={{ fontSize: 50, alignSelf: 'center' }}>
             Level 1 Quiz
           </Text>
-          <Image source={overlay} style={styles.layerStyle} />
-          <Text style={styles.textStyle1}>
-            Get access to paid Games and{'\n'}
-            Assessments for your child
-          </Text>
-          <Text style={styles.textStyle2}>
-          {'\n'}{'\n'}
-            Payments can be made in the{'\n'}
-            Parent Dashboard
-          </Text>
+          <View style={{ position: 'absolute' }}>
+            <PayOverlay />
+          </View>
         </View>
       </View>
     );
@@ -36,25 +28,6 @@ const styles = {
   viewStyle: {
     flex: 1,
     backgroundColor: '#def7f9',
-  },
-  layerStyle: {
-    flex: 1,
-    position: 'absolute'
-  },
-  textStyle1: {
-    fontSize: 25,
-    color: '#fff',
-    alignSelf: 'center',
-    fontWeight: '400',
-    marginTop: 110,
-    textAlign: 'center'
-  },
-  textStyle2: {
-    fontSize: 18,
-    color: '#fff',
-    alignSelf: 'center',
-    fontWeight: '200',
-    textAlign: 'center'
   }
 };
 
