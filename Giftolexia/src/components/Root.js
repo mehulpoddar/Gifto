@@ -22,7 +22,7 @@ const Level1Tab = TabNavigator({
   level1test: {
     screen: Level1Test,
     navigationOptions: {
-      tabBar: 'Assessment',
+      tabBarLabel: 'Assessment',
       tabBarIcon: () => <Image source={testImg} />
     }
   }
