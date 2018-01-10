@@ -7,22 +7,23 @@ const headerImage = require('../../images/gifto_logo.png');
 
 class ParentDash extends Component {
 
-  logout() {
-    firebase.auth().signOut();
+  forLogout() {
     this.props.navigation.navigate('login');
+    firebase.auth().signOut();
   }
 
   render() {
     return (
       <View style={styles.containerStyle}>
         <Image
+          style={{ backgroundColor: '#def7f9' }}
           source={headerImage}
           style={styles.imageStyle}
           resizeMode="stretch"
         />
         <Header>Parent Dashboard</Header>
         <View style={{ flexDirection: 'row' }}>
-          <Button onPress={this.logout()}>Log out</Button>
+          <Button onPress={this.forLogout()}>Log out</Button>
         </View>
       </View>
     );
@@ -34,6 +35,10 @@ const styles = {
     alignSelf: 'center',
     height: 75,
     width: 300,
+  },
+  containerStyle: {
+    backgroundColor: '#def7f9',
+    flex: 1
   }
 };
 

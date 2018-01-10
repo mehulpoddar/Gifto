@@ -4,22 +4,22 @@ import { Header } from '../common';
 import LevelDetail from '../LevelDetail';
 
 const headerImage = require('../../images/gifto_logo.png');
-const image1 = require('../../images/level1.jpg');
-const image2 = require('../../images/child_dash.png');
+const l1 = require('../../images/level1.jpg');
+const l2 = require('../../images/white.jpg');
 
 const levels = [
   {
     level: 'Level 1',
     name: 'Phonetic Chart',
-    image: image1,
-    navi: 'level1'
+    image: l1,
+    navi: 'level1Tab'
   },
-  { level: 'Level 2', name: 'ABC', image: image2 },
-  { level: 'Level 3', name: 'XYZ', image: image2 },
-  { level: 'Level 4', name: 'PQR', image: image2 },
-  { level: 'Level 5', name: 'DEF', image: image2 },
-  { level: 'Level 6', name: 'TUV', image: image2 },
-  { level: 'Level 7', name: 'MNO', image: image2 },
+  { level: 'Level 2', name: 'ABC', image: l2 },
+  { level: 'Level 3', name: 'XYZ', image: l2 },
+  { level: 'Level 4', name: 'PQR', image: l2 },
+  { level: 'Level 5', name: 'DEF', image: l2 },
+  { level: 'Level 6', name: 'TUV', image: l2 },
+  { level: 'Level 7', name: 'MNO', image: l2 },
 ];
 
 class ChildDash extends Component {
@@ -32,7 +32,7 @@ class ChildDash extends Component {
   }
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#def7f9' }}>
         <View style={styles.containerStyle}>
           <Image
             source={headerImage}
@@ -64,8 +64,9 @@ const styles = {
   },
   containerStyle: {
     borderBottomWidth: 1,
+    borderRadius: 10,
     padding: 5,
-    backgroundColor: '#fff',
+    backgroundColor: '#def7f9',
     borderColor: '#ddd',
     position: 'relative'
   }

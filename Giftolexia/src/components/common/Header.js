@@ -1,19 +1,22 @@
 // Importing
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, ImageBackground } from 'react-native';
 
 // Creating
+
+const gradientBg = require('../../images/blueWhite.jpg');
+
 const Header = (props) => (
-    <View style={styles.viewStyle}>
+    <ImageBackground source={gradientBg} style={styles.viewStyle}>
       <Text style={styles.textStyle}>{props.children}</Text>
-    </View>
+    </ImageBackground>
   );
 
 const styles = {
   textStyle: {
     fontSize: 30,
-    color: '#007aff',
-    textShadowColor: '#ddd',
+    color: '#e8fafc',
+    textShadowColor: '#000',
     textShadowOffset: { height: 3, width: 2 }
   },
   viewStyle: {
@@ -26,7 +29,7 @@ const styles = {
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 1,
     elevation: 5,
-    position: 'relative'
+    position: 'relative',
   }
 };
 // Exporting

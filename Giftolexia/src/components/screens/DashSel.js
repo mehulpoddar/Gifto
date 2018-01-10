@@ -1,13 +1,13 @@
 import React from 'react';
-import { Image, ImageBackground, TouchableOpacity } from 'react-native';
+import { Image, View, TouchableOpacity } from 'react-native';
 
-const bgImg = require('../../images/black.jpg');
+//const bgImg = require('../../images/black.jpg');
 const childImg = require('../../images/child_dash.png');
 const parentImg = require('../../images/parent_dash.png');
 
 const DashSel = ({ navigation }) => {
   return (
-    <ImageBackground source={bgImg} style={styles.bgStyle} >
+    <View style={styles.bgStyle} >
 
       <TouchableOpacity
       style={styles.childStyle}
@@ -23,14 +23,14 @@ const DashSel = ({ navigation }) => {
         <Image source={parentImg} />
       </TouchableOpacity>
 
-    </ImageBackground>
+    </View>
   );
 };
 
 const styles = {
   bgStyle: {
     flex: 1,
-    justifyContent: 'space-between'
+    backgroundColor: '#2c3e50'
   },
   childStyle: {
     alignSelf: 'center',

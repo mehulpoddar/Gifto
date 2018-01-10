@@ -148,10 +148,10 @@ export default class Login extends Component {
   );
  }
  return (
-   <View style={{ height: 450 }}>
+   <ImageBackground source={gradientBg} style={styles.spinnerStyle}>
     <Spinner size='large' />
-    <Image source={iconImg} style={{ alignSelf: 'center' }} />
-   </View>
+    <Image source={iconImg} style={{ bottom: 100 }} />
+   </ImageBackground>
   );
 }
 }
@@ -212,5 +212,10 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
+  },
+  spinnerStyle: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 };

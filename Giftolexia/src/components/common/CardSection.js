@@ -1,11 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ImageBackground } from 'react-native';
+
+const gradientBg = require('../../images/blueWhite.jpg');
 
 const CardSection = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    <ImageBackground source={gradientBg} style={styles.containerStyle}>
       {props.children}
-    </View>
+    </ImageBackground>
   );
 };
 
@@ -13,7 +15,7 @@ const styles = {
   containerStyle: {
     borderBottomWidth: 1,
     backgroundColor: '#fff',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     flexDirection: 'row',
     borderColor: '#ddd',
     position: 'relative'

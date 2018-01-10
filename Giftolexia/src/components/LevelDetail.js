@@ -1,21 +1,20 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Text, TouchableOpacity, Image } from 'react-native';
 import { Card, CardSection } from './common';
 
 const LevelDetail = (props) => {
   const {
     labelTextStyle,
     imageStyle,
-    labelStyle
   } = styles;
 
   return (
       <Card>
         <TouchableOpacity onPress={props.onPress}>
           <CardSection>
-            <View style={labelStyle}>
+
               <Text style={labelTextStyle}>{props.level}</Text>
-            </View>
+
           </CardSection>
 
           <CardSection>
@@ -26,9 +25,7 @@ const LevelDetail = (props) => {
           </CardSection>
 
           <CardSection>
-            <View style={labelStyle}>
               <Text style={labelTextStyle}>{props.name}</Text>
-            </View>
           </CardSection>
         </TouchableOpacity>
       </Card>
@@ -36,20 +33,13 @@ const LevelDetail = (props) => {
 };
 
 const styles = {
-  labelStyle: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    marginLeft: 5,
-    marginRight: 5
-  },
   labelTextStyle: {
     alignSelf: 'center',
-    color: '#007aff',
+    color: '#fff',
     fontSize: 16,
     fontWeight: '600',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   imageStyle: {
     height: 225,
