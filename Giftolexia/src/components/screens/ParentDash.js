@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, Alert } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button } from '../common';
 
@@ -7,9 +7,9 @@ const headerImage = require('../../images/gifto_logo.png');
 
 class ParentDash extends Component {
 
-  forLogout() {
-    this.props.navigation.navigate('login');
+  toLogout() {
     firebase.auth().signOut();
+    this.props.navigation.navigate('login');
   }
 
   render() {
@@ -23,7 +23,7 @@ class ParentDash extends Component {
         />
         <Header>Parent Dashboard</Header>
         <View style={{ flexDirection: 'row' }}>
-          <Button onPress={this.forLogout()}>Log out</Button>
+          <Button onPress={() => this.toLogout()}>Log out</Button>
         </View>
       </View>
     );
