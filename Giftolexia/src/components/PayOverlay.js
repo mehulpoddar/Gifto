@@ -6,7 +6,10 @@ const overlay = require('../images/purple.png');
 const PayOverlay = () => {
   return (
     <View>
-      <Image source={overlay} style={styles.layerStyle} />
+      <Image
+        source={overlay}
+        style={styles.layerStyle}
+      />
       <View>
         <Text style={styles.textStyle1}>
           Get access to paid Games and{'\n'}
@@ -24,19 +27,19 @@ const PayOverlay = () => {
 
 const styles = {
   textStyle1: {
-    fontSize: 25,
+    fontSize: 22,
     color: '#fff',
     fontWeight: '400',
     marginTop: 180,
     textAlign: 'center',
-    left: '10%'
+    alignSelf: 'center'
   },
   textStyle2: {
-    fontSize: 18,
+    fontSize: 15,
     color: '#fff',
     fontWeight: '200',
     textAlign: 'center',
-    left: '10%'
+    alignSelf: 'center'
   },
   layerStyle: {
     flex: 1,

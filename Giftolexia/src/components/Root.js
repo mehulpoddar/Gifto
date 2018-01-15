@@ -34,8 +34,8 @@ const Level1Tab = TabNavigator({
       backgroundColor: '#005b96'
     },
     iconStyle: {
-      height: 60,
-      width: 60
+      height: 64,
+      width: 64
     },
     activeTintColor: '#eae965'
   },

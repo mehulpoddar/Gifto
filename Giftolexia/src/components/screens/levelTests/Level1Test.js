@@ -5,19 +5,27 @@ import PayOverlay from '../../PayOverlay';
 
 class Level1Test extends Component {
 
+  state = { paid: false };
+
+  test() {
+    if (!this.state.paid) {
+      return (
+        <PayOverlay />
+      );
+    }
+  }
+
   render() {
     return (
-        <View style={styles.viewStyle}>
+      <View style={styles.viewStyle}>
         <Header>
           Level 1 Assessment
         </Header>
         <View>
-          <Text style={{ fontSize: 50, alignSelf: 'center' }}>
+          <Text style={styles.quizStyle}>
             Level 1 Quiz
           </Text>
-          <View style={{ position: 'absolute' }}>
-            <PayOverlay />
-          </View>
+          {this.test()}
         </View>
       </View>
     );
@@ -28,6 +36,12 @@ const styles = {
   viewStyle: {
     flex: 1,
     backgroundColor: '#def7f9',
+  },
+  quizStyle: {
+    fontSize: 50,
+    alignSelf: 'center',
+    marginTop: 50,
+    position: 'absolute',
   }
 };
 
