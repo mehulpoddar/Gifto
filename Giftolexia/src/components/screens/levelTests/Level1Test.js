@@ -7,7 +7,7 @@ class Level1Test extends Component {
 
   state = { paid: false };
 
-  test() {
+  OverlayDisp() {
     if (!this.state.paid) {
       return (
         <PayOverlay />
@@ -25,7 +25,7 @@ class Level1Test extends Component {
           <Text style={styles.quizStyle}>
             Level 1 Quiz
           </Text>
-          {this.test()}
+          {this.OverlayDisp()}
         </View>
       </View>
     );
