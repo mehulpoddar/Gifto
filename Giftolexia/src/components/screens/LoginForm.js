@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, Image, View,
          KeyboardAvoidingView, StatusBar,
          TextInput, ImageBackground,
-         TouchableOpacity, Alert, Linking }
+         TouchableOpacity, Alert, Linking, Keyboard }
 from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
@@ -27,7 +27,7 @@ export default class Login extends Component {
     const { email, password } = this.state;
 
     this.setState({ error: '', loading: true });
-
+    Keyboard.dismiss();
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(this.onLoginSuccess.bind(this))
      .catch(this.onLoginFail.bind(this));
