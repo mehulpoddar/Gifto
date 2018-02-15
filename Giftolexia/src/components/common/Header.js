@@ -17,7 +17,8 @@ const styles = {
     fontSize: 30,
     color: '#e8fafc',
     textShadowColor: '#000',
-    textShadowOffset: { height: 3, width: 2 }
+    textShadowOffset: { height: 3, width: 2 },
+    backgroundColor: 'transparent'
   },
   viewStyle: {
     backgroundColor: '#F8F8F8',

@@ -42,6 +42,7 @@ const styles = {
     alignSelf: 'center',
     marginTop: 50,
     position: 'absolute',
+    backgroundColor: 'transparent'
   }
 };
 

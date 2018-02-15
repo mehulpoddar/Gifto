@@ -32,14 +32,16 @@ const styles = {
     fontWeight: '400',
     marginTop: 180,
     textAlign: 'center',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    backgroundColor: 'transparent'
   },
   textStyle2: {
     fontSize: 15,
     color: '#fff',
     fontWeight: '200',
     textAlign: 'center',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    backgroundColor: 'transparent'
   },
   layerStyle: {
     flex: 1,

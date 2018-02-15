@@ -133,11 +133,11 @@ export default class Login extends Component {
     </TouchableOpacity>
 
     <TouchableOpacity onPress={this.forgotPassword.bind(this)}>
-     <Text>Forgot password?</Text>
+     <Text style={styles.iOStext}>Forgot password?</Text>
    </TouchableOpacity>
 
    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/giftolexia/')}>
-    <Text>About Us</Text>
+    <Text style={styles.iOStext}>About Us</Text>
   </TouchableOpacity>
 
     {this.loadingSpinner()}
@@ -175,7 +175,8 @@ const styles = {
   text: {
     color: '#fff',
     marginTop: 10,
-    fontSize: 26
+    fontSize: 26,
+    backgroundColor: 'transparent'
   },
   container: {
     padding: 15
@@ -218,5 +219,8 @@ const styles = {
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  iOStext: {
+    backgroundColor: 'transparent'
   }
 };
