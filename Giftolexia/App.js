@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import Root from './src/components/Root';//this is a test
+import Root from './src/components/Root';
 
 class App extends Component {
   componentWillMount() {
