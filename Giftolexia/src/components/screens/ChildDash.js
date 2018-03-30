@@ -14,7 +14,12 @@ const levels = [
     image: l1,
     navi: 'level1Tab'
   },
-  { level: 'Level 2', name: 'ABC', image: l2 },
+  {
+    level: 'Level 2',
+    name: 'ABC',
+    image: l2,
+     navi: 'level2Tab'
+  },
   { level: 'Level 3', name: 'XYZ', image: l2 },
   { level: 'Level 4', name: 'PQR', image: l2 },
   { level: 'Level 5', name: 'DEF', image: l2 },
