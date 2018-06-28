@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { ListView, View, Image } from 'react-native';
-import { Header } from '../common';
+import { Header, Button } from '../common';
 import LevelDetail from '../LevelDetail';
+import firebase from 'firebase';
 
 const headerImage = require('../../images/gifto_logo.png');
 const l1 = require('../../images/level1.jpg');
@@ -56,7 +57,11 @@ class ChildDash extends Component {
             />
           }
         />
+        <View style={{ flexDirection: 'row' }}>
+          <Button onPress={() => this.toLogout()}>Log out</Button>
+        </View>
       </View>
+
     );
   }
 }
