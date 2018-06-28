@@ -36,6 +36,10 @@ class ChildDash extends Component {
        dataSource: ds.cloneWithRows(levels),
      };
   }
+  toLogout() {
+    firebase.auth().signOut();
+    this.props.navigation.navigate('login');
+  }
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: '#def7f9' }}>
