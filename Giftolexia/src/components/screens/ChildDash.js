@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ListView, View, Image } from 'react-native';
-import { Header, Button } from '../common';
+import { ListView, View, Image, TouchableOpacity, Text } from 'react-native';
+import { Header } from '../common';
 import LevelDetail from '../LevelDetail';
 import firebase from 'firebase';
 
@@ -61,9 +61,12 @@ class ChildDash extends Component {
             />
           }
         />
-        <View style={{ flexDirection: 'row' }}>
-          <Button onPress={() => this.toLogout()}>Log out</Button>
-        </View>
+        <TouchableOpacity
+         style={styles.logoutcont}
+         onPress={() => this.toLogout()}
+        >
+         <Text style={styles.buttonText}>Log Out</Text>
+       </TouchableOpacity>
       </View>
 
     );
@@ -83,6 +86,18 @@ const styles = {
     backgroundColor: '#def7f9',
     borderColor: '#ddd',
     position: 'relative'
+  },
+  logoutcont: {
+    backgroundColor: '#499acf',
+    paddingVertical: 15,
+    marginTop: 0,
+    borderRadius: 10
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 18
   }
 };
 
