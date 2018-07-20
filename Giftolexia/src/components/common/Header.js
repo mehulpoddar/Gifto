@@ -1,15 +1,13 @@
 // Importing
 import React from 'react';
-import { Text, ImageBackground } from 'react-native';
+import { Text, View } from 'react-native';
 
 // Creating
 
-const gradientBg = require('../../images/blueWhite.jpg');
-
 const Header = (props) => (
-    <ImageBackground source={gradientBg} style={styles.viewStyle}>
+    <View style={styles.viewStyle}>
       <Text style={styles.textStyle}>{props.children}</Text>
-    </ImageBackground>
+    </View>
   );
 
 const styles = {
@@ -21,7 +19,7 @@ const styles = {
     backgroundColor: 'transparent'
   },
   viewStyle: {
-    backgroundColor: '#F8F8F8',
+    backgroundColor: '#68a3dd',
     justifyContent: 'center',
     alignItems: 'center',
     height: 80,

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Text, Image, View,
          KeyboardAvoidingView, StatusBar,
-         TextInput, ImageBackground,
-         TouchableOpacity, Alert, Linking, Keyboard }
+         TextInput, TouchableOpacity,
+         Alert, Linking, Keyboard }
 from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
 
 const iconImg = require('../../images/gifto_icon.png');
-const gradientBg = require('../../images/blueWhite.jpg');
 
 export default class Login extends Component {
   state = { email: '', password: '', error: '', loading: false, loggedIn: true };
@@ -77,7 +76,7 @@ export default class Login extends Component {
     if (!this.state.loggedIn) {
    return (
     <KeyboardAvoidingView style={styles.mainContainer}>
-    <ImageBackground source={gradientBg} style={styles.mainContainer}>
+    <View style={styles.mainContainer}>
      <View style={styles.logoContainer}>
       <Image
        style={styles.logo}
@@ -144,15 +143,15 @@ export default class Login extends Component {
 
      </View>
      </View>
-     </ImageBackground>
+     </View>
     </KeyboardAvoidingView>
   );
  }
  return (
-   <ImageBackground source={gradientBg} style={styles.spinnerStyle}>
+   <View style={styles.spinnerStyle}>
     <Spinner size='large' />
     <Image source={iconImg} style={{ bottom: 100 }} />
-   </ImageBackground>
+   </View>
   );
 }
 }
@@ -160,7 +159,7 @@ export default class Login extends Component {
 const styles = {
   mainContainer: {
     flex: 1,
-    //backgroundColor: '#3498db'
+    backgroundColor: '#68a3dd'
   },
   logoContainer: {
     alignItems: 'center',
@@ -218,7 +217,8 @@ const styles = {
   spinnerStyle: {
     flex: 1,
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#68a3dd'
   },
   iOStext: {
     backgroundColor: 'transparent'
