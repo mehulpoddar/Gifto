@@ -10,7 +10,6 @@ const LevelDetail = (props) => {
 
   return (
       <Card>
-        <TouchableOpacity onPress={props.onPress}>
           <CardSection>
 
               <Text style={labelTextStyle}>{props.level}</Text>
@@ -27,7 +26,6 @@ const LevelDetail = (props) => {
           <CardSection>
               <Text style={labelTextStyle}>{props.name}</Text>
           </CardSection>
-        </TouchableOpacity>
       </Card>
   );
 };

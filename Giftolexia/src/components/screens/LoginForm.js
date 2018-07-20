@@ -54,7 +54,7 @@ export default class Login extends Component {
       loading: false,
       error: ''
     });
-    this.props.navigation.navigate('dashSel');
+    this.props.navigation.navigate('levelsDash');
   }
 
   loadingSpinner() {
