@@ -1,29 +1,60 @@
 import React, { Component } from 'react';
 import { ListView, View, Image, TouchableOpacity, Text } from 'react-native';
 import firebase from 'firebase';
-import { Header } from '../common';
 import LevelDetail from '../LevelDetail';
 
 const headerImage = require('../../images/gifto_logo.png');
-const l1 = require('../../images/level1.jpg');
-const l2 = require('../../images/white.jpg');
+
 
 const levels = [
   {
-    level: 'Level 1',
-    name: 'Phonetic Chart',
-    image: l1
+    level: 'Level 1: Introduction to Phonetics',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+    ln4: 'Link 4',
+      l1: 'https://www.youtube.com/watch?v=7mahmMmnSx4',
+      l2: 'http://www.macmillanenglish.com/pronunciation/interactive-phonemic-charts/',
+      l3: 'https://www.youtube.com/watch?v=Kxsw7eS270w',
+      l4: 'https://www.uni-due.de/SHE/Phonetics_Brief_Introduction.pdf',
+      lno: 4,
+    body: 'This level gives you an introduction to phonetics. \
+    The phonetic chart can be \
+used as a reference throughout your learning process'
   },
   {
-    level: 'Level 2',
-    name: 'ABC',
-    image: l2
+    level: 'Level 2: Single Vowel Sounds',
+    link: 'ABC',
+    body: 'In this level you will learn about single vowel sounds or Monophthongs'
   },
-  { level: 'Level 3', name: 'XYZ', image: l2 },
-  { level: 'Level 4', name: 'PQR', image: l2 },
-  { level: 'Level 5', name: 'DEF', image: l2 },
-  { level: 'Level 6', name: 'TUV', image: l2 },
-  { level: 'Level 7', name: 'MNO', image: l2 },
+  {
+    level: 'Level 3: Double and Triple Vowel Sounds',
+    link: 'XYZ',
+    body: 'This level introduces Diphthongs or double vowel\
+  sounds and Triphthongs- \
+triple vowel sounds'
+  },
+  {
+    level: 'Level 4: Single and Double Consonants',
+    link: 'PQR',
+    body: 'Here you learn about consonant sounds- single and double consonant sounds'
+  },
+  {
+    level: 'Level 5: Blends and Diagraphs',
+    link: 'DEF',
+    body: 'This level is all about blends and diagraphs'
+  },
+  {
+    level: 'Level 6: Segmenting and Blending',
+    link: 'TUV',
+    body: 'This level introduces segmenting and blending a word'
+  },
+  {
+    level: 'Level 7: Syllables',
+    link: 'MNO',
+    body: 'Now that you have mastered letter sounds and combinations we \
+    introduce you to syllables'
+  },
 ];
 
 class ChildDash extends Component {
@@ -54,7 +85,7 @@ class ChildDash extends Component {
            <Text style={styles.buttonText}>About Us</Text>
          </TouchableOpacity>
         </View>
-      
+
         <ListView
           style={{ flex: 1 }}
           dataSource={this.state.dataSource}
@@ -101,7 +132,7 @@ const styles = {
     color: '#fff',
     fontWeight: '700',
     fontSize: 18
-  }
+  },
 };
 
 export default ChildDash;
