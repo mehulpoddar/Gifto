@@ -54,7 +54,7 @@ class ChildDash extends Component {
            <Text style={styles.buttonText}>About Us</Text>
          </TouchableOpacity>
         </View>
-        <Header>Levels Dashboard</Header>
+      
         <ListView
           style={{ flex: 1 }}
           dataSource={this.state.dataSource}
