@@ -15,13 +15,12 @@ const levels = [
              'https://www.youtube.com/watch?v=Kxsw7eS270w',
              'https://www.uni-due.de/SHE/Phonetics_Brief_Introduction.pdf'],
     lno: 4,
-    body: 'This level gives you an introduction to phonetics. \
-    The phonetic chart can be \
+    body: 'This level gives you an introduction to phonetics.\
+The phonetic chart can be \
 used as a reference throughout your learning process'
   },
   {
     level: 'Level 2: Single Vowel Sounds',
-    link: 'ABC',
     ln: ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5'],
     links: ['https://www.youtube.com/watch?v=72M770xTvaU&t=197s',
             'https://www.youtube.com/watch?v=j-27eVle65A',
@@ -33,7 +32,6 @@ used as a reference throughout your learning process'
   },
   {
     level: 'Level 3: Double and Triple Vowel Sounds',
-    link: 'XYZ',
     ln: ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5'],
     links: ['https://www.youtube.com/watch?v=d1HZPx8DuDw',
             'https://www.youtube.com/watch?v=X8GKVbZph9I',
@@ -47,7 +45,6 @@ triple vowel sounds'
   },
   {
     level: 'Level 4: Single and Double Consonants',
-    link: 'PQR',
     ln: ['Link 1', 'Link 2', 'Link 3', 'Link 4'],
     links: ['https://www.youtube.com/watch?v=h4yrIuCE6UM',
             'https://www.youtube.com/watch?v=zoarwB-7O_c',
@@ -58,7 +55,6 @@ triple vowel sounds'
   },
   {
     level: 'Level 5: Blends and Diagraphs',
-    link: 'DEF',
     ln: ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5', 'Link 6', 'Link 7', 'Link 8'],
     links: ['http://www.theschoolhouse.us/lessons/lesson57.html',
             'https://www.youtube.com/watch?v=2EyUo2d2WpM',
@@ -73,7 +69,6 @@ triple vowel sounds'
   },
   {
     level: 'Level 6: Segmenting and Blending',
-    link: 'TUV',
     ln: ['Link 1', 'Link 2', 'Link 3'],
     links: ['https://www.youtube.com/watch?v=O_xMtW64pSw',
             'https://www.youtube.com/watch?v=dquCtrqbKpY',
@@ -83,13 +78,12 @@ triple vowel sounds'
   },
   {
     level: 'Level 7: Syllables',
-    link: 'MNO',
     ln: ['Link 1', 'Link 2'],
     links: ['https://www.verbling.com/articles/post/understanding-vowels-syllables-monophtho',
             'https://www.englishclub.com/esl-worksheets/pronunciation/EC_pronunciation-syllables-1-PI_with-KEY.pdf'],
     lno: 2,
     body: 'Now that you have mastered letter sounds and combinations we \
-    introduce you to syllables'
+introduce you to syllables'
   },
 ];
 
