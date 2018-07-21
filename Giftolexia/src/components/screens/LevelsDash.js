@@ -18,42 +18,96 @@ const levels = [
       l3: 'https://www.youtube.com/watch?v=Kxsw7eS270w',
       l4: 'https://www.uni-due.de/SHE/Phonetics_Brief_Introduction.pdf',
       lno: 4,
-    body: 'This level gives you an introduction to phonetics. \
-    The phonetic chart can be \
+    body: 'This level gives you an introduction to phonetics.\
+The phonetic chart can be \
 used as a reference throughout your learning process'
   },
   {
     level: 'Level 2: Single Vowel Sounds',
-    link: 'ABC',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+    ln4: 'Link 4',
+    ln5: 'Link 5',
+      l1: 'https://www.youtube.com/watch?v=72M770xTvaU&t=197s',
+      l2: 'https://www.youtube.com/watch?v=j-27eVle65A',
+      l3: 'https://www.youtube.com/watch?v=kw18P_ggt4g',
+      l4: 'https://www.youtube.com/watch?v=IX6EE4MEduY',
+      l5: 'https://www.youtube.com/watch?v=TCkb2CvcMDo',
+      lno: 5,
     body: 'In this level you will learn about single vowel sounds or Monophthongs'
   },
   {
     level: 'Level 3: Double and Triple Vowel Sounds',
-    link: 'XYZ',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+    ln4: 'Link 4',
+    ln5: 'Link 5',
+      l1: 'https://www.youtube.com/watch?v=d1HZPx8DuDw',
+      l2: 'https://www.youtube.com/watch?v=X8GKVbZph9I',
+      l3: 'https://www.youtube.com/watch?v=TsOP7tDugdQ',
+      l4: 'https://www.youtube.com/watch?v=Di6h9rIpQbs',
+      l5: 'https://www.youtube.com/watch?v=er9TAX1_jmQ',
+      lno: 5,
     body: 'This level introduces Diphthongs or double vowel\
   sounds and Triphthongs- \
 triple vowel sounds'
   },
   {
     level: 'Level 4: Single and Double Consonants',
-    link: 'PQR',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+    ln4: 'Link 4',
+      l1: 'https://www.youtube.com/watch?v=h4yrIuCE6UM',
+      l2: 'https://www.youtube.com/watch?v=zoarwB-7O_c',
+      l3: 'https://www.youtube.com/watch?v=Jalt5JYSqrs',
+      l4: 'https://www.youtube.com/watch?v=gbG2jyI8600',
+      lno: 4,
     body: 'Here you learn about consonant sounds- single and double consonant sounds'
   },
   {
     level: 'Level 5: Blends and Diagraphs',
-    link: 'DEF',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+    ln4: 'Link 4',
+    ln5: 'Link 5',
+    ln6: 'Link 6',
+    ln7: 'Link 7',
+    ln8: 'Link 8',
+      l1: 'http://www.theschoolhouse.us/lessons/lesson57.html',
+      l2: 'https://www.youtube.com/watch?v=2EyUo2d2WpM',
+      l3: 'http://blog.maketaketeach.com/wp-content/uploads/2013/01/Chart-Blends-and-Digraphsblogpic.jpg',
+      l4: 'https://www.youtube.com/watch?v=AS9S06iunh0',
+      l5: 'https://www.youtube.com/watch?v=tgdX20eSisw',
+      l6: 'http://www.theschoolhouse.us/lessons/lesson57.html',
+      l7: 'https://www.youtube.com/watch?v=sYmwStHMezc',
+      l8: 'http://www.mybreakfastreadingprogram.com/consonants.htm',
+      lno: 8,
     body: 'This level is all about blends and diagraphs'
   },
   {
     level: 'Level 6: Segmenting and Blending',
-    link: 'TUV',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+    ln3: 'Link 3',
+      l1: 'https://www.youtube.com/watch?v=O_xMtW64pSw',
+      l2: 'https://www.youtube.com/watch?v=dquCtrqbKpY',
+      l3: 'https://www.youtube.com/watch?v=5mIhMh1oYdA',
+      lno: 3,
     body: 'This level introduces segmenting and blending a word'
   },
   {
     level: 'Level 7: Syllables',
-    link: 'MNO',
+    ln1: 'Link 1',
+    ln2: 'Link 2',
+      l1: 'https://www.verbling.com/articles/post/understanding-vowels-syllables-monophtho',
+      l2: 'https://www.englishclub.com/esl-worksheets/pronunciation/EC_pronunciation-syllables-1-PI_with-KEY.pdf',
+      lno: 2,
     body: 'Now that you have mastered letter sounds and combinations we \
-    introduce you to syllables'
+introduce you to syllables'
   },
 ];
 
