@@ -135,7 +135,7 @@ export default class Login extends Component {
      <Text style={styles.iOStext}>Forgot password?</Text>
    </TouchableOpacity>
 
-   <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/giftolexia/')}>
+   <TouchableOpacity onPress={() => Linking.openURL('https://www.giftolexia.com')}>
     <Text style={styles.iOStext}>About Us</Text>
   </TouchableOpacity>
 
@@ -144,7 +144,13 @@ export default class Login extends Component {
      </View>
      </View>
      </View>
+     <View style={styles.credview}>
+ <Text style={styles.credtext}>© Giftolexia 2018</Text>
+ <Text style={styles.credtext}>In collaboration with Dept. of Computer Science DSCE Bangalore</Text>
+ <Text style={styles.credtext}>Special thanks to Mehul Poddar,Mukunda K Das and Shreesh Nayak</Text>
+      </View>
     </KeyboardAvoidingView>
+
   );
  }
  return (
@@ -222,5 +228,18 @@ const styles = {
   },
   iOStext: {
     backgroundColor: 'transparent'
-  }
+  },
+  credtext: {
+   textAlign: 'center',
+   //marginBottom: 20,
+   //marginTop: 'auto',
+   marginLeft: 10,
+   marginRight: 10,
+   fontSize: 10,
+ },
+ credview: {
+   //justifyContent: 'center',
+      //alignItems: 'center',
+      marginBottom: 10
+ }
 };
