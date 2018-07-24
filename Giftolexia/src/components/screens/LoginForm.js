@@ -231,15 +231,11 @@ const styles = {
   },
   credtext: {
    textAlign: 'center',
-   //marginBottom: 20,
-   //marginTop: 'auto',
    marginLeft: 10,
    marginRight: 10,
    fontSize: 10,
  },
  credview: {
-   //justifyContent: 'center',
-      //alignItems: 'center',
       marginBottom: 10
  }
 };
