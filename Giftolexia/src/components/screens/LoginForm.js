@@ -199,7 +199,7 @@ const styles = {
     backgroundColor: '#499acf',
     paddingVertical: 15,
     marginBottom: 15,
-    marginTop: 15,
+    marginTop: 5,
     borderRadius: 10
   },
   signUpContainer: {
