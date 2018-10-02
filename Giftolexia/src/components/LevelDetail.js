@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, Linking } from 'react-native';
+import { Text, TouchableOpacity, Linking, Image } from 'react-native';
 import { Card, CardSection } from './common';
 
 
@@ -18,7 +18,9 @@ const LevelDetail = (props) => {
         <TouchableOpacity
          onPress={() => Linking.openURL(props.links[i])}
         >
-        <Text style={labelTextStyle}>{props.ln[i]}</Text>
+        <Image
+         source={props.src[i]}
+        />
         </TouchableOpacity>
       </CardSection>
 		);
