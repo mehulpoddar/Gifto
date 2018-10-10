@@ -1,20 +1,46 @@
-import React from 'react';
-import { Text, TouchableOpacity, Linking, Image } from 'react-native';
+import React, { Component } from 'react';
+import { Text, TouchableOpacity, Linking, Image, FlatList, View } from 'react-native';
 import { Card, CardSection } from './common';
 
 
 const LevelDetail = (props) => {
   const {
     labelTextStyle,
+    viewStyle,
+    imageStyle,
+    flatlistStyle,
+    buttonText,
   } = styles;
 
-  let links = [];
+class HorizontalFlatListItem extends Component {
+  render() {
+    return (
+      <View>
+        <TouchableOpacity
+          onPress={() => Linking.openURL(this.props.item.Link)}
+        >
+        <Image
+          style={imageStyle}
+          source={this.props.item.Img}
+        />
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+  /*let links = [];*/
+  let list = [];
   for (let i = 0; i < props.lno; i++) {
     if (i === 0) {
-      links = [];
+      /*links = [];*/
+      list = [];
     }
+
+    /* --- Code Not Used Anymore */
+    /*
     links.push(
-			<CardSection key={i}>
+			<View style={viewStyle} key={i}>
         <TouchableOpacity
          onPress={() => Linking.openURL(props.links[i])}
         >
@@ -22,21 +48,37 @@ const LevelDetail = (props) => {
          source={props.src[i]}
         />
         </TouchableOpacity>
-      </CardSection>
+      </View>
 		);
+    */
+    list.push(
+      { Link: props.links[i], Img: props.src[i] }
+    );
 	}
   return (
       <Card>
           <CardSection>
-
               <Text style={labelTextStyle}>{props.level}</Text>
-
           </CardSection>
 
           <CardSection>
-            <Text style={labelTextStyle}>{props.body}</Text>
+            <Text style={buttonText}>{props.body}</Text>
           </CardSection>
-          { links }
+          <CardSection>
+            <FlatList
+                data={list}
+                contentContainerStyle={list.length < 7 && flatlistStyle}
+                horizontal={true}
+                renderItem={({ item, index }) =>
+                    <HorizontalFlatListItem
+                      index={index}
+                      item={item}
+                    />
+                }
+                keyExtractor={(item, index) => index.toString()}
+            />
+          </CardSection>
+
       </Card>
   );
 };
@@ -45,16 +87,17 @@ const styles = {
   labelTextStyle: {
     alignSelf: 'center',
     color: '#fff',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     paddingTop: 10,
     paddingBottom: 10,
     backgroundColor: 'transparent'
   },
   imageStyle: {
-    height: 225,
+    height: 50,
     flex: 1,
-    width: null
+    width: 50,
+    resizeMode: 'contain'
   },
   buttonCont: {
     backgroundColor: '#499acf',
@@ -65,8 +108,21 @@ const styles = {
   buttonText: {
     textAlign: 'center',
     color: '#fff',
-    fontWeight: '700',
-    fontSize: 18
+    fontWeight: '500',
+    fontSize: 16
+  },
+  viewStyle: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: 90,
+    height: 50,
+    borderWidth: 1,
+    borderColor: 'white'
+  },
+  flatlistStyle: {
+    flex: 1,
+    justifyContent: 'center'
   },
 };
 
