@@ -132,7 +132,7 @@ class ChildDash extends Component {
   }
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#def7f9' }}>
+      <View style={{ flex: 1, backgroundColor: '#eae7d6' }}>
         <View style={styles.containerStyle}>
           <Image
             source={headerImage}
@@ -178,7 +178,7 @@ const styles = {
     borderBottomWidth: 1,
     borderRadius: 10,
     padding: 5,
-    backgroundColor: '#def7f9',
+    backgroundColor: '#eae7d6',
     borderColor: '#ddd',
     position: 'relative'
   },
