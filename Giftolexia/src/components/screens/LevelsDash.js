@@ -166,14 +166,12 @@ class ChildDash extends Component {
             />
           }
         />
-        <View style={styles.logoutCurve}>
         <TouchableOpacity
          style={styles.logoutcont}
          onPress={() => this.toLogout()}
         >
          <Text style={styles.buttonText}>Log Out</Text>
        </TouchableOpacity>
-       </View>
       </View>
 
     );
@@ -206,10 +204,6 @@ const styles = {
     color: '#fff',
     fontWeight: '700',
     fontSize: 18
-  },
-  logoutCurve: {
-    borderRadius: 15,
-    overflow: 'hidden'
   }
 };
 
