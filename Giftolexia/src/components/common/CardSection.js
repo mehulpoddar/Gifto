@@ -16,7 +16,7 @@ const styles = {
     flexDirection: 'row',
     borderColor: '#ddd',
     position: 'relative',
-    borderRadius: 10
+    borderRadius: 20
   }
 };
 
