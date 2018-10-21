@@ -55,15 +55,15 @@ class HorizontalFlatListItem extends Component {
     );
 	}
   return (
-      <Card>
-          <CardSection>
+      <Card style={{ backgroundColor: props.color }}>
+          <CardSection style={{ backgroundColor: props.color }}>
               <Text style={labelTextStyle}>{props.level}</Text>
           </CardSection>
 
-          <CardSection>
+          <CardSection style={{ backgroundColor: props.color }}>
             <Text style={buttonText}>{props.body}</Text>
           </CardSection>
-          <CardSection>
+          <CardSection style={{ backgroundColor: props.color }}>
             <FlatList
                 data={list}
                 contentContainerStyle={list.length < 7 && flatlistStyle}

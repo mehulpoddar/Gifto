@@ -19,6 +19,7 @@ const levels = [
              'https://www.youtube.com/watch?v=Kxsw7eS270w',
              'https://www.uni-due.de/SHE/Phonetics_Brief_Introduction.pdf'],
     lno: 4,
+    color: '#68a3dd',
     body: 'This level gives you an introduction to phonetics.\
 The phonetic chart can be \
 used as a reference throughout your learning process'
@@ -37,6 +38,7 @@ used as a reference throughout your learning process'
             'https://www.youtube.com/watch?v=IX6EE4MEduY',
             'https://www.youtube.com/watch?v=TCkb2CvcMDo'],
     lno: 5,
+    color: '#146188',
     body: 'In this level you will learn about single vowel sounds or Monophthongs'
   },
   {
@@ -53,6 +55,7 @@ used as a reference throughout your learning process'
             'https://www.youtube.com/watch?v=Di6h9rIpQbs',
             'https://www.youtube.com/watch?v=er9TAX1_jmQ'],
     lno: 5,
+    color: '#68a3dd',
     body: 'This level introduces Diphthongs or double vowel\
   sounds and Triphthongs- \
 triple vowel sounds'
@@ -69,6 +72,7 @@ triple vowel sounds'
             'https://www.youtube.com/watch?v=Jalt5JYSqrs',
             'https://www.youtube.com/watch?v=gbG2jyI8600'],
     lno: 4,
+    color: '#146188',
     body: 'Here you learn about consonant sounds- single and double consonant sounds'
   },
   {
@@ -91,6 +95,7 @@ triple vowel sounds'
             'https://www.youtube.com/watch?v=sYmwStHMezc',
             'http://www.mybreakfastreadingprogram.com/consonants.htm'],
     lno: 8,
+    color: '#68a3dd',
     body: 'This level is all about blends and diagraphs'
   },
   {
@@ -103,6 +108,7 @@ triple vowel sounds'
             'https://www.youtube.com/watch?v=dquCtrqbKpY',
             'https://www.youtube.com/watch?v=5mIhMh1oYdA'],
     lno: 3,
+    color: '#146188',
     body: 'This level introduces segmenting and blending a word'
   },
   {
@@ -113,6 +119,7 @@ triple vowel sounds'
     links: ['https://www.verbling.com/articles/post/understanding-vowels-syllables-monophtho',
             'https://www.englishclub.com/esl-worksheets/pronunciation/EC_pronunciation-syllables-1-PI_with-KEY.pdf'],
     lno: 2,
+    color: '#68a3dd',
     body: 'Now that you have mastered letter sounds and combinations we \
 introduce you to syllables'
   },
