@@ -166,12 +166,14 @@ class ChildDash extends Component {
             />
           }
         />
+        <View style={styles.containerStyle}>
         <TouchableOpacity
          style={styles.logoutcont}
          onPress={() => this.toLogout()}
         >
          <Text style={styles.buttonText}>Log Out</Text>
        </TouchableOpacity>
+       </View>
       </View>
 
     );
