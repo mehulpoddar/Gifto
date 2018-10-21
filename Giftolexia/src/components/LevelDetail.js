@@ -6,7 +6,6 @@ import { Card, CardSection } from './common';
 const LevelDetail = (props) => {
   const {
     labelTextStyle,
-    viewStyle,
     imageStyle,
     flatlistStyle,
     buttonText,
