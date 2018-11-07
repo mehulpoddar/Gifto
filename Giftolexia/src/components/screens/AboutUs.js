@@ -32,8 +32,12 @@ const AboutUs = () => {
           <Text style={contentStyle}>Happy Learning!</Text>
       </View>
       <View style={bottom}>
-        <Text style={contentStyle}>Write to us info@giftolexia.com for any clarification or comments with the Subject: English Learning App.</Text>
+        <Text style={contentStyle}>Write to us at info@giftolexia.com for any clarification or comments with the Subject: English Learning App.</Text>
         <Text />
+        <Text style={contentStyle}>Click below to visit our website:</Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.giftolexia.com')}>
+        <Text style={contentStyle}>www.giftolexia.com</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -52,12 +56,14 @@ const styles = {
   },
   content: {
     flex: 2,
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20
   },
   toolBar: {
     backgroundColor: '#20a3aa',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
     flexDirection: 'row'
   },
   toolBarTitle: {
@@ -79,9 +85,9 @@ const styles = {
   },
   contentStyle: {
     fontSize: 16,
-    textAlign: 'justify',
+    textAlign: 'center',
     color: '#000',
-    margin: 3
+    margin: 5
   }
 };
 
