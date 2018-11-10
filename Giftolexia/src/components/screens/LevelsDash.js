@@ -153,7 +153,7 @@ class ChildDash extends Component {
            style={styles.logoutcont}
            onPress={() => this.props.navigation.navigate('aboutUs')}
           >
-           <Text style={styles.buttonText}>About Us</Text>
+           <Text style={styles.buttonText}>How To Use</Text>
          </TouchableOpacity>
         </View>
 
