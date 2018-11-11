@@ -108,7 +108,7 @@ const styles = {
     textAlign: 'center',
     color: '#fff',
     fontWeight: '500',
-    fontSize: 16
+    fontSize: f * 16
   },
   viewStyle: {
     flex: 1,
