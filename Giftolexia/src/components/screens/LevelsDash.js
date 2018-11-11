@@ -139,6 +139,7 @@ class ChildDash extends Component {
   }
   toLogout() {
     firebase.auth().signOut();
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBack);
     this.props.navigation.navigate('login');
   }
 
