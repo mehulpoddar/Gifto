@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, Linking, Image, FlatList, View } from 'react-native';
+import { Text, TouchableOpacity, Linking, Image, FlatList, View, PixelRatio } from 'react-native';
 import { Card, CardSection } from './common';
 
 
@@ -81,28 +81,28 @@ class HorizontalFlatListItem extends Component {
       </Card>
   );
 };
-
+const f = PixelRatio.getFontScale();
 const styles = {
   labelTextStyle: {
     alignSelf: 'center',
     color: '#fff',
-    fontSize: 18,
+    fontSize: f * 18,
     fontWeight: '600',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: f * 10,
+    paddingBottom: f * 10,
     backgroundColor: 'transparent'
   },
   imageStyle: {
-    height: 50,
+    height: f * 50,
     flex: 1,
-    width: 50,
+    width: f * 50,
     resizeMode: 'contain'
   },
   buttonCont: {
     backgroundColor: '#499acf',
-    paddingVertical: 10,
+    paddingVertical: f * 10,
     marginTop: 0,
-    borderRadius: 10
+    borderRadius: f * 10
   },
   buttonText: {
     textAlign: 'center',
@@ -114,9 +114,9 @@ const styles = {
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    width: 90,
-    height: 50,
-    borderWidth: 1,
+    width: f * 90,
+    height: f * 50,
+    borderWidth: f * 1,
     borderColor: 'white'
   },
   flatlistStyle: {

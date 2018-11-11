@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Linking, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Linking, Image, PixelRatio } from 'react-native';
 const headerImage = require('../../images/gifto_logo.png');
 
 const AboutUs = () => {
@@ -42,13 +42,13 @@ const AboutUs = () => {
     </View>
   );
 };
-
+const f = PixelRatio.getFontScale();
 const styles = {
   imageStyle: {
     alignSelf: 'center',
     bottom: 0,
-    height: 75,
-    width: 300,
+    height: f * 75,
+    width: f * 300,
     position: 'absolute'
   },
   mainContainer: {
@@ -57,13 +57,13 @@ const styles = {
   content: {
     flex: 2,
     alignItems: 'center',
-    marginTop: 20,
-    marginBottom: 20
+    marginTop: f * 20,
+    marginBottom: f * 20
   },
   toolBar: {
     backgroundColor: '#20a3aa',
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: f * 20,
+    paddingBottom: f * 20,
     flexDirection: 'row'
   },
   toolBarTitle: {
@@ -71,23 +71,23 @@ const styles = {
     textAlign: 'center',
     flex: 1,
     fontWeight: '700',
-    fontSize: 18
+    fontSize: f * 18
   },
   bottom: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginTop: 100
+    marginTop: f * 100
   },
   contentHeaderStyle: {
-    fontSize: 16,
+    fontSize: f * 16,
     textAlign: 'center',
     color: '#000'
   },
   contentStyle: {
-    fontSize: 16,
+    fontSize: f * 16,
     textAlign: 'center',
     color: '#000',
-    margin: 5
+    margin: f * 5
   }
 };
 

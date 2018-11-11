@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View, Image, TouchableOpacity, Text, StatusBar } from 'react-native';
+import { ListView, View, Image, TouchableOpacity, Text, StatusBar, PixelRatio } from 'react-native';
 import firebase from 'firebase';
 import LevelDetail from '../LevelDetail';
 
@@ -179,33 +179,33 @@ class ChildDash extends Component {
     );
   }
 }
-
+const f = PixelRatio.getFontScale();
 const styles = {
   imageStyle: {
     alignSelf: 'center',
-    height: 75,
-    width: 300,
+    height: f * 75,
+    width: f * 300,
   },
   containerStyle: {
-    borderBottomWidth: 1,
-    borderRadius: 10,
-    padding: 5,
+    borderBottomWidth: f * 1,
+    borderRadius: f * 10,
+    padding: f * 5,
     backgroundColor: '#eae7d6',
     borderColor: '#ddd',
     position: 'relative'
   },
   logoutcont: {
     backgroundColor: '#20a3aa',
-    paddingVertical: 15,
+    paddingVertical: f * 15,
     marginTop: 0,
-    borderRadius: 15,
+    borderRadius: f * 15,
     overflow: 'hidden'
   },
   buttonText: {
     textAlign: 'center',
     color: '#fff',
     fontWeight: '700',
-    fontSize: 18
+    fontSize: f * 18
   }
 };
 
