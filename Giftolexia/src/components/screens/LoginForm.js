@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, Image, View,
          KeyboardAvoidingView, StatusBar,
          TextInput, TouchableOpacity,
-         Alert, Linking, Keyboard }
+         Alert, Linking, Keyboard, PixelRatio }
 from 'react-native';
 import firebase from 'firebase';
 import { Spinner } from '../common';
@@ -161,7 +161,7 @@ export default class Login extends Component {
   );
 }
 }
-
+const f = PixelRatio.getWindowScale();
 const styles = {
   mainContainer: {
     flex: 1,
@@ -169,54 +169,54 @@ const styles = {
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 20,
-    marginTop: 20,
+    marginBottom: f * 20,
+    marginTop: f * 20,
     justifyContent: 'center'
   },
   logo: {
-    width: 100,
-    height: 100
+    width: f * 100,
+    height: f * 100
   },
   text: {
     color: '#fff',
-    marginTop: 10,
-    fontSize: 26,
+    marginTop: f * 10,
+    fontSize: f * 26,
     backgroundColor: 'transparent'
   },
   container: {
-    padding: 15
+    padding: f * 15
   },
   input: {
-    height: 40,
+    height: f * 40,
     backgroundColor: 'rgba(255,255,255,0.2)',
-    marginBottom: 10,
+    marginBottom: f * 10,
     color: '#fff',
-    paddingHorizontal: 10,
-    fontSize: 18,
-    borderRadius: 10
+    paddingHorizontal: f * 10,
+    fontSize: f * 18,
+    borderRadius: f * 10
   },
   logInContainer: {
     backgroundColor: '#499acf',
-    paddingVertical: 15,
-    marginBottom: 15,
-    marginTop: 5,
-    borderRadius: 10
+    paddingVertical: f * 15,
+    marginBottom: f * 15,
+    marginTop: f * 5,
+    borderRadius: f * 10
   },
   signUpContainer: {
     backgroundColor: '#499acf',
-    paddingVertical: 15,
-    marginBottom: 15,
+    paddingVertical: f * 15,
+    marginBottom: f * 15,
     marginTop: 0,
-    borderRadius: 10
+    borderRadius: f * 10
   },
   buttonText: {
     textAlign: 'center',
     color: '#fff',
     fontWeight: '700',
-    fontSize: 18
+    fontSize: f * 18
   },
   errorTextStyle: {
-    fontSize: 20,
+    fontSize: f * 20,
     alignSelf: 'center',
     color: 'red'
   },
@@ -231,11 +231,11 @@ const styles = {
   },
   credtext: {
    textAlign: 'center',
-   marginLeft: 10,
-   marginRight: 10,
-   fontSize: 10,
+   marginLeft: f * 10,
+   marginRight: f * 10,
+   fontSize: f * 10,
  },
  credview: {
-      marginBottom: 10
+      marginBottom: f * 10
  }
 };

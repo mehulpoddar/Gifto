@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, PixelRatio } from 'react-native';
 
 const CardSection = (props) => {
   return (
@@ -8,15 +8,15 @@ const CardSection = (props) => {
     </View>
   );
 };
-
+const f = PixelRatio.getWindowScale();
 const styles = {
   containerStyle: {
-    borderBottomWidth: 1,
+    borderBottomWidth: f * 1,
     justifyContent: 'center',
     flexDirection: 'row',
     borderColor: '#ddd',
     position: 'relative',
-    borderRadius: 20
+    borderRadius: f * 20
   }
 };
 

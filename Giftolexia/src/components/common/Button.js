@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, PixelRatio } from 'react-native';
 
 const Button = (props) => {
   const { textStyle, buttonStyle } = styles;
@@ -9,27 +9,27 @@ const Button = (props) => {
       </TouchableOpacity>
   );
 };
-
+const f = PixelRatio.getWindowScale();
 const styles = {
   textStyle: {
     alignSelf: 'center',
-    fontSize: 16,
+    fontSize: f * 16,
     fontWeight: '600',
     color: '#007aff',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: f * 10,
+    paddingBottom: f * 10,
   },
   buttonStyle: {
     backgroundColor: '#fff',
-    borderRadius: 5,
+    borderRadius: f * 5,
     flex: 1,
     alignSelf: 'stretch',
-    borderWidth: 1,
+    borderWidth: f * 1,
     borderColor: '#007aff',
-    marginLeft: 5,
-    marginRight: 5,
-    marginBottom: 5,
-    marginTop: 5
+    marginLeft: f * 5,
+    marginRight: f * 5,
+    marginBottom: f * 5,
+    marginTop: f * 5
   }
 };
 
