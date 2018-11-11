@@ -17,11 +17,7 @@ const Input = (props) => {
     </View>
   );
 };
-<<<<<<< HEAD
 const f = PixelRatio.getFontScale();
-=======
-const f = PixelRatio.getWindowScale();
->>>>>>> 2b2cd711596aceaba09c3c40a4001c552ead5558
 const styles = {
   inputStyle: {
     height: f * 40,
