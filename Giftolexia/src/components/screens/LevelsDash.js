@@ -8,7 +8,7 @@ const headerImage = require('../../images/gifto_logo.png');
 
 const levels = [
   {
-    level: 'Level 1: Introduction to Phonetics ',
+    level: 'Level 1: Introduction to Phonetics  ',
     src: [require('../../images/icons/1A.png'),
           require('../../images/icons/1B.png'),
           require('../../images/icons/1C.png'),
@@ -25,7 +25,7 @@ The phonetic chart can be \
 used as a reference throughout your learning process'
   },
   {
-    level: 'Level 2: Single Vowel Sounds ',
+    level: 'Level 2: Single Vowel Sounds  ',
     src: [require('../../images/icons/2A.png'),
           require('../../images/icons/2B.png'),
           require('../../images/icons/2C.png'),
@@ -42,7 +42,7 @@ used as a reference throughout your learning process'
     body: 'In this level you will learn about single vowel sounds or Monophthongs'
   },
   {
-    level: 'Level 3: Double and Triple Vowel Sounds ',
+    level: 'Level 3: Double and Triple Vowel Sounds  ',
     src: [require('../../images/icons/3A.png'),
           require('../../images/icons/3B.png'),
           require('../../images/icons/3C.png'),
@@ -61,7 +61,7 @@ used as a reference throughout your learning process'
 triple vowel sounds'
   },
   {
-    level: 'Level 4: Single and Double Consonants ',
+    level: 'Level 4: Single and Double Consonants  ',
     src: [require('../../images/icons/4A.png'),
           require('../../images/icons/4B.png'),
           require('../../images/icons/4C.png'),
@@ -76,7 +76,7 @@ triple vowel sounds'
     body: 'Here you learn about consonant sounds- single and double consonant sounds'
   },
   {
-    level: 'Level 5: Blends and Diagraphs ',
+    level: 'Level 5: Blends and Diagraphs  ',
     src: [require('../../images/icons/5A.png'),
           require('../../images/icons/5B.png'),
           require('../../images/icons/5C.png'),
@@ -99,7 +99,7 @@ triple vowel sounds'
     body: 'This level is all about blends and diagraphs'
   },
   {
-    level: 'Level 6: Segmenting and Blending ',
+    level: 'Level 6: Segmenting and Blending  ',
     src: [require('../../images/icons/6A.png'),
           require('../../images/icons/6B.png'),
           require('../../images/icons/6C.png')],
@@ -112,7 +112,7 @@ triple vowel sounds'
     body: 'This level introduces segmenting and blending a word'
   },
   {
-    level: 'Level 7: Syllables ',
+    level: 'Level 7: Syllables  ',
     src: [require('../../images/icons/7A.png'),
           require('../../images/icons/7B.png')],
     ln: ['Link 1', 'Link 2'],
