@@ -17,7 +17,7 @@ const AboutUs = () => {
   return (
     <View style={mainContainer}>
       <View style={toolBar}>
-          <Text style={toolBarTitle}>About Us</Text>
+          <Text style={toolBarTitle}>How To Use</Text>
       </View>
       <View style={content}>
           <Text style={contentHeaderStyle}>Welcome to the Phonetic way of learning English!</Text>

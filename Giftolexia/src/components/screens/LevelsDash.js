@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View, Image, TouchableOpacity, Text, StatusBar, PixelRatio } from 'react-native';
+import { ListView, View, Image, TouchableOpacity, BackHandler, Text, StatusBar, PixelRatio } from 'react-native';
 import firebase from 'firebase';
 import LevelDetail from '../LevelDetail';
 
@@ -135,11 +135,18 @@ class ChildDash extends Component {
   }
   componentDidMount() {
     StatusBar.setHidden(true);
+    BackHandler.addEventListener('hardwareBackPress', () => this.handleBack());
   }
   toLogout() {
     firebase.auth().signOut();
     this.props.navigation.navigate('login');
   }
+
+  handleBack() {
+    this.props.navigation.navigate('levelsDash');
+    return true;
+  }
+
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: '#eae7d6' }}>
