@@ -15,7 +15,7 @@ const levels = [
           require('../../images/icons/1D.png')],
     ln: ['Link 1', 'Link 2', 'Link 3', 'Link 4'],
     links: ['https://www.youtube.com/watch?v=7mahmMmnSx4',
-             'http://www.macmillanenglish.com/pronunciation/interactive-phonemic-charts/',
+             'https://www.youtube.com/watch?v=0HeujZ45OZE',
              'https://www.youtube.com/watch?v=Kxsw7eS270w',
              'https://www.uni-due.de/SHE/Phonetics_Brief_Introduction.pdf'],
     lno: 4,
